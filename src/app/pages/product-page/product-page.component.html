@@ -18,9 +18,11 @@
       <div class="card">
         <button class="card-button"><i class="icon-close"></i></button>
         <img [src]="product.img" />
-        <div class="card-tag">{{ product.type }}</div>
+        <div class="card-tag" [ngClass]="getTagClass(product.type.id)">
+          {{ product.type.text }}
+        </div>
         <div class="card-text">
-          <h2>{{ product.title }}</h2>
+          <h3>{{ product.title }}</h3>
           <p>{{ product.description }}</p>
         </div>
       </div>

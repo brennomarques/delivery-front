@@ -1,3 +1,5 @@
+@import "./../../../themes/variables.scss";
+
 .card-box {
     display: flex;
     flex-wrap: wrap;
@@ -9,7 +11,7 @@
 
 .card-space-between {
     justify-content: space-around;
-    // align-items: center;
+    align-items: center;
 }
 
 .card {
@@ -24,7 +26,7 @@
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.10);
 }
 
 .card img {
@@ -40,7 +42,6 @@
     right: -10px;
     width: 30px;
     height: 30px;
-    // background-color: red;
     color: white;
     border: none;
     border-radius: 50%;
@@ -48,6 +49,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-button:hover {
+    transform: rotate(80deg);
 }
 
 .card-tag {
@@ -60,15 +67,28 @@
     background-color: blue;
 }
 
+.card-tag-blue {
+    background-color: blue;
+}
+
+.card-tag-red {
+    background-color: red;
+}
+
+.card-tag-yellow {
+    background-color: $yellow-110;
+}
+
 .card .card-text {
     padding: 0 15px 0 10px;
 }
 
-.card h2 {
+.card h3 {
     margin-top: 1px;
     white-space: nowrap;
-    overflow: hidden;
+    // overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 20px;
 }
 
 .card p {

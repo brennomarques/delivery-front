@@ -25,14 +25,21 @@ export class FindService {
     let products: Product.product[] = [];
 
     if (response.length > MAGIC_ENUM.ZERO) {
-      products = response.map((item: Product.product) => ({
-        id: item.id,
-        title: item.title,
-        description: item.description,
-        img: item.img,
-        type: PRODUCT_TYPE[item.type] ? PRODUCT_TYPE[item.type].text : 'Desconhecido',
-      }));
+      products = response.map((item: any) => {
+        const typeId: keyof typeof PRODUCT_TYPE = item.type;
 
+        return {
+          id: item.id,
+          title: item.title,
+          description: item.description,
+          img: item.img,
+          type: {
+            id: parseInt(item.type, 10),
+            text: PRODUCT_TYPE[typeId].text
+          }
+
+        }
+      });
     }
 
     return products;

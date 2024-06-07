@@ -6,7 +6,10 @@ export namespace Product {
     title: string;
     description: string;
     img: string;
-    type: keyof typeof PRODUCT_TYPE;
+    type: {
+      id: number;
+      text: string;
+    };
   }
 
   export interface ProductCollection {

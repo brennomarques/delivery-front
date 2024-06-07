@@ -55,5 +55,17 @@ export class ProductPageComponent {
     return this.products.filter((product: Product.product) => product.title.toLowerCase().includes(title.toLowerCase()));
   }
 
+  getTagClass(type: number): string {
+    switch (type) {
+      case 1:
+        return 'card-tag-blue';
+      case 2:
+        return 'card-tag-red';
+      case 3:
+        return 'card-tag-yellow';
+      default:
+        return 'card-tag-blue';
+    }
+  }
 
 }
