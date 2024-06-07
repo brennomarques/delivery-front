@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap");
+
+/*
+ * Application global variables.
+ */
+
+$family-serif: "Open Sans";
+$family-primary: $family-serif;
+
+/*
+* Color system
+*/
+
+$white: #fff;
+$black: #000;
+
+$gray-050: #f2f5f7;
+$gray-100: #f5f7fa;
+$gray-150: #f5f6f8;
+$gray-151: #ccc;
+$gray-180: #cacedb;
+$gray-200: #eceff4;
+$gray-250: #eceeef;
+$gray-280: #d7dae3;
+$gray-281: #efefef;
+$gray-300: #9b9b9b;
+$gray-310: #818ea2;
+$gray-400: #818ea3;
+$gray-450: #767676;
+$gray-500: #a0a0a0;
+$gray-550: #626970;
+$gray-560: #495057;
+$gray-600: #5d5d5d;
+$gray-601: #696b80;
+$gray-700: #444;
+$gray-800: #212121;
+$gray-803: #232323;
+
+$gray-900: #152935;
+
+$blue: #5499ff;
+$blue-100: #f2f8f8;
+$blue-200: #edf5ff;
+$blue-300: #add8e6;
+$blue-680: #3d70b2;
+$blue-690: #01afec;
+$blue-700: #3d516f;
+$blue-900: #54698d;
+
+$red: #de4759;
+$red-100: #f5c6cb;
+$red-110: #de4759;
+$red-950: #d00a00;
+
+$yellow: #efa522;
+$yellow-100: #f3c709;
+
+$green: #3f8978;
+$green-light: #54b66f;
+$green-100: #45996c;
+$green-200: #54b66f;
+$green-210: #3ecb90;
+$green-211: #26996c;
+$green-215: #b2cbba;
+$green-600: #336f61;
+$green-700: #327253;
+$green-900: #2f6659;
+$green-950: #054830;
+$green-960: #0c4d64;
+$green-961: #004a62;
+
+$color-background-primary: #f5f7fa;
+$color-background-secondary: #eaedef;
+$color-background-content: white;
+
+$color-info-text: #5e5e5e;
+$color-info-text-simple: #807e82;
+
+$v2-primeira: #FF6600;
+$v2-segunda: #0066FF;
+$v2-terceira: rgb(127, 175, 166);

@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="input-box">
+    <div class="input-group">
+      <input
+        type="text"
+        class="form-control"
+        (keyup)="getProductByName($event)"
+        placeholder="Pesquise aqui"
+      />
+      <div class="input-group-append">
+        <i class="icon-search"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-box">
+    <ng-container *ngFor="let product of products">
+      <div class="card">
+        <button class="card-button"><i class="icon-close"></i></button>
+        <img [src]="product.img" />
+        <div class="card-tag">{{ product.type }}</div>
+        <div class="card-text">
+          <h2>{{ product.title }}</h2>
+          <p>{{ product.description }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

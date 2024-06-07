@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+// styles.scss
+@import 'themes/variables';
+@import 'themes/theme';
+
+// Components globals
+@import "themes/components/input.scss";
+@import "themes/components/icons.scss";
