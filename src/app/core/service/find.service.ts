@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
-import { Product } from '../models/products-model';
+import { Observable, map } from 'rxjs';
 import { MAGIC_ENUM, PRODUCT_TYPE } from '../enums/enums';
+import { product } from '../models/products-model';
 
 @Injectable({
   providedIn: 'root',
@@ -12,10 +11,10 @@ export class FindService {
 
   constructor(private http: HttpClient) { }
 
-  public getAll(): Observable<any> {
+  public getAll(): Observable<product[]> {
     console.log('vamos buscas os dados');
-    return this.http.get<any>('https://githubanotaai.github.io/frontend-interview-mock-data/cardlist.json').pipe(
-      map((response: any) => {
+    return this.http.get('https://githubanotaai.github.io/frontend-interview-mock-data/cardlist.json').pipe(
+      map((response) => {
         return this.prepare(response);
       })
     );

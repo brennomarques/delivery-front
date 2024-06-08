@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MAGIC_ENUM } from '@app/core/enums/enums';
 import { Product } from '@app/core/models/products-model';
 import { FindService } from '@app/core/service/find.service';
@@ -11,7 +11,7 @@ import { FindService } from '@app/core/service/find.service';
   templateUrl: './product-page.component.html',
   styleUrl: './product-page.component.scss'
 })
-export class ProductPageComponent {
+export class ProductPageComponent implements OnInit {
 
   products: any;
 

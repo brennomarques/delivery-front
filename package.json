@@ -1,6 +1,6 @@
 {
   "name": "delivery-front",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "echo 'node version =' $(node -v) && ng serve",
@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
+    "lint:fix": "eslint . --fix",
     "prepare": "husky"
   },
   "private": true,

@@ -19,7 +19,7 @@
         <button class="card-button">
           <i class="icon-close"></i>
         </button>
-        <img [src]="product.img" />
+        <img [src]="product.img" alt="image" />
         <div class="card-tag" [ngClass]="getTagClass(product.type.id)">
           {{ product.type.text }}
         </div>
