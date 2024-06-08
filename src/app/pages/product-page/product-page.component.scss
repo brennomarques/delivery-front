@@ -57,33 +57,6 @@
     transform: rotate(80deg);
 }
 
-#closeSvg path {
-    fill: red;
-}
-
-
-.icon-img {
-    fill: red;
-}
-
-.card-button {
-    color: red;
-    /* Define a cor que você deseja para o ícone */
-}
-
-
-svg:hover path {
-    fill: #fce57e;
-}
-
-.icon-closes {
-    width: 24px;
-    /* Define o tamanho do ícone */
-    height: 24px;
-    fill: currentColor;
-    /* Garante que o ícone será colorido com a cor atual do texto */
-}
-
 .card-tag {
     position: absolute;
     top: 123px;
