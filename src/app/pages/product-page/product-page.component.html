@@ -16,7 +16,11 @@
   <div class="card-box">
     <ng-container *ngFor="let product of products">
       <div class="card">
-        <button class="card-button"><i class="icon-close"></i></button>
+        <button class="card-button">
+          <svg class="icon-closes" viewBox="0 0 24 24">
+            <use xlink:href="./../../../assets/image/close.svg"></use>
+          </svg>
+        </button>
         <img [src]="product.img" />
         <div class="card-tag" [ngClass]="getTagClass(product.type.id)">
           {{ product.type.text }}

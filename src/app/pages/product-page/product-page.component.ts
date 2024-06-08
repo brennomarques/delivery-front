@@ -34,7 +34,7 @@ export class ProductPageComponent {
     });
   }
 
-  getProductByName($event: Event): void {
+  public getProductByName($event: Event): void {
     const searchTerm = ($event.target as HTMLInputElement).value;
 
     if (!this.isEmpty(searchTerm)) {
@@ -55,7 +55,7 @@ export class ProductPageComponent {
     return this.products.filter((product: Product.product) => product.title.toLowerCase().includes(title.toLowerCase()));
   }
 
-  getTagClass(type: number): string {
+  public getTagClass(type: number): string {
     switch (type) {
       case 1:
         return 'card-tag-blue';
