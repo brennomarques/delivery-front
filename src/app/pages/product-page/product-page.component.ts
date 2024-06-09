@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { MAGIC_ENUM } from '@app/core/enums/enums';
-import { Product } from '@app/core/models/products-model';
+import { product } from '@app/core/models/products-model';
 import { FindService } from '@app/core/service/find.service';
 
 @Component({
@@ -24,8 +24,6 @@ export class ProductPageComponent implements OnInit {
   private findAll(): void {
     this.findService.getAll().subscribe({
       next: (response: any) => {
-        console.log('Vamos imprimir aqui products');
-        console.log(response);
         this.products = response;
       },
       error: (error: any) => {
@@ -42,7 +40,6 @@ export class ProductPageComponent implements OnInit {
       this.products = resultSearch;
       return;
     }
-
     this.findAll();
 
   }
@@ -51,8 +48,8 @@ export class ProductPageComponent implements OnInit {
     return value.trim().length === MAGIC_ENUM.ZERO;
   }
 
-  private searchProductByTitle(title: string): Product.product[] {
-    return this.products.filter((product: Product.product) => product.title.toLowerCase().includes(title.toLowerCase()));
+  private searchProductByTitle(title: string): product[] {
+    return this.products.filter((product: product) => product.title.toLowerCase().includes(title.toLowerCase()));
   }
 
   public getTagClass(type: number): string {

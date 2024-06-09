@@ -12,7 +12,6 @@ export class FindService {
   constructor(private http: HttpClient) { }
 
   public getAll(): Observable<product[]> {
-    console.log('vamos buscas os dados');
     return this.http.get('https://githubanotaai.github.io/frontend-interview-mock-data/cardlist.json').pipe(
       map((response) => {
         return this.prepare(response);
@@ -20,8 +19,8 @@ export class FindService {
     );
   }
 
-  private prepare(response: any): Product.product[] {
-    let products: Product.product[] = [];
+  private prepare(response: any): product[] {
+    let products: product[] = [];
 
     if (response.length > MAGIC_ENUM.ZERO) {
       products = response.map((item: any) => {
