@@ -16,7 +16,7 @@
   <div class="card-box">
     <ng-container *ngFor="let product of products">
       <div class="card">
-        <button class="card-button">
+        <button class="card-button" (click)="deleteProduct(product)">
           <i class="icon-close"></i>
         </button>
         <img [src]="product.img" alt="image" />

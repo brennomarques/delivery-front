@@ -44,6 +44,17 @@ export class ProductPageComponent implements OnInit {
 
   }
 
+  public deleteProduct(product: product): void {
+    const result = this.products.findIndex((productList: product) => productList.id === product.id);
+
+    if (!(result !== -1)) {
+      console.warn(`Produto ${product} não encontrado.`);
+    }
+
+    this.products.splice(result, 1);
+    console.log(`Produto ${result} deletado com sucesso.`);
+  }
+
   private isEmpty(value: string): boolean {
     return value.trim().length === MAGIC_ENUM.ZERO;
   }
